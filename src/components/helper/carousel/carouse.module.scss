@@ -1,0 +1,127 @@
+.carousel {
+    margin-bottom: 50px;
+    
+    .arrow {
+        font-size: 30px;
+        color: white;
+        position: absolute;
+        top: 44%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        opacity: 0.5;
+        z-index: 1;
+        display: none;
+      
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+    .carouselLeftNav {
+        left: 30px;
+    }
+    .carouselRightNav {
+        right: 30px;
+    }
+    .loadingSkeleton {
+        display: flex;
+        gap: 10px;
+        overflow-y: hidden;
+        margin-right: -20px;
+        margin-left: -20px;
+        padding: 0 20px;
+       
+        .skeletonItem {
+            width: 125px;
+            flex-shrink: 0;
+            .posterBlock {
+                border-radius: 12px;
+                width: 100%;
+                aspect-ratio: 1 / 1.5;
+                margin-bottom: 30px;
+            }
+        }
+    }
+    .carouselItems {
+        display: flex;
+        gap: 10px;
+        overflow-y: hidden;
+        margin-right: -20px;
+        margin-left: -20px;
+        padding: 0 20px;
+        .carouselItem {
+            width: 125px;
+            cursor: pointer;
+            flex-shrink: 0;
+            .posterBlock {
+                position: relative;
+                width: 100%;
+                aspect-ratio: 1 / 1.5;
+                background-size: cover;
+                background-position: center;
+                margin-bottom: 30px;
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+                padding: 10px;
+                    img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        border-radius: 12px;
+                        overflow: hidden;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                        margin: 0;
+                    }
+                // .genres {
+                //     display: none;
+                //     position: relative;
+                //     // @include md {
+                //     //     display: flex;
+                //     //     flex-flow: wrap;
+                //     //     justify-content: flex-end;
+                //     // }
+                // }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px){
+    .carousel{
+        .arrow{
+            display: block;            
+        }
+        .carouselItems{
+            gap: 2rem;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        .carouselItem{
+            width: calc(25% - 15px);
+
+        }
+        .loadingSkeleton{
+            gap: 2rem;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        .skeletonItem{
+            width: calc(25% - 15px);
+        }
+    }
+}
+
+@media screen and (min-width: 64rem){
+     .carousel{
+        .carouselItems{
+            .carouselItem{
+                width: calc(20% - 16px);
+            }
+        }
+     }
+}

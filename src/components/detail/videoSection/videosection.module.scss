@@ -1,0 +1,68 @@
+.videosSection {
+    
+    .videos {
+        display: flex;
+        gap: 10px;
+        overflow-x: auto;
+        margin-right: -20px;
+        margin-left: -20px;
+        padding: 0 20px;
+        
+        .videoItem {
+            width: 150px;
+            flex-shrink: 0;
+            
+            cursor: pointer;
+            .videoThumbnail {
+                margin-bottom: 15px;
+                position: relative;
+                img {
+                    width: 100%;
+                    display: block;
+                    border-radius: 12px;
+                    transition: all 0.7s ease-in-out;
+                }
+               
+                &:hover {
+                    img {
+                        opacity: 0.5;
+                    }
+                   
+                }
+            }
+            
+        }
+    }
+
+    .videoSkeleton {
+        display: flex;
+        gap: 10px;
+        overflow-x: auto;
+        margin-right: -20px;
+        margin-left: -20px;
+        padding: 0 20px;
+       
+        .skItem {
+            width: 150px;
+            flex-shrink: 0;
+            
+            .thumb {
+                width: 100%;
+                aspect-ratio: 16 / 9;
+                border-radius: 12px;
+                margin-bottom: 10px;
+            }
+            .row {
+                height: 20px;
+                width: 100%;
+                border-radius: 10px;
+                margin-bottom: 10px;
+            }
+            .row2 {
+                height: 20px;
+                width: 75%;
+                border-radius: 10px;
+            }
+        }
+    }
+}
