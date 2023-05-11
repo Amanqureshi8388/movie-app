@@ -5,7 +5,7 @@ import useFetch from "../../hooks/useFetch";
 
 const Recommendation = ({ id }) => {
     const { data, loading, error } = useFetch(
-        `/movie/${id}/recommendations`
+        `/movie/${id && id}/recommendations`
     );
 
     return (

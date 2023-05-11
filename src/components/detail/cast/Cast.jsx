@@ -21,7 +21,7 @@ const Cast = ({ data, loading }) => {
                 <div className="sectionHeading text-white text-2xl mb-[2.5rem]">Top Cast</div>
                 {!loading ? (
                     <div className="listItems flex gap-5 mr-[-20px] ml-[-20px] md:m-0 px-5 overflow-y-hidden">
-                        {data?.map((item) => {
+                        {data && data?.map((item) => {
                             let imgUrl = item.profile_path
                                 ? url + item.profile_path
                                 : avatar;

@@ -12,9 +12,11 @@ import Similar from '@/components/detail/carousels/Similar';
 
 const Details = () => {
     const router = useRouter()
-    const {details} = router.query
-    const {data,loading} =  useFetch(`/movie/${details && details }/videos`)
-    const {data: credits, loading: creditsLoading} =  useFetch(`/movie/${details && details}/credits`)
+    const {Details} = router.query
+    const {data,loading} =  useFetch(`/movie/${Details && Details }/videos`)
+    const {data: credits, loading: creditsLoading} =  useFetch(`/movie/${Details && Details}/credits`)
+   
+
    
     
   return (
@@ -22,8 +24,8 @@ const Details = () => {
     <DetailsBanner video={data?.results?.[0]} crew={credits?.crew}/>
     <VideosSection data={data} loading={loading}/>
     <Cast data={credits?.cast} loading={creditsLoading} />
-    <Similar id={details} />
-    <Recommendation id={details} />
+    <Similar id={Details} />
+    <Recommendation id={Details} />
     </>
   )
 }

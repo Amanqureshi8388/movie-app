@@ -15,8 +15,8 @@ const DetailBanner = ({ video, crew }) => {
   const [videoId, setVideoId] = useState(null);
   const url = "https://image.tmdb.org/t/p/w500";
   const router = useRouter();
-  const { details } = router.query;
-  const { data, loading } = useFetch(`/movie/${details && details}`);
+  const { Details } = router.query;
+  const { data, loading } = useFetch(`/movie/${Details && Details}`);
 
   const director = crew?.filter((f) => f.job === "Director");
   const writer = crew?.filter(
@@ -75,7 +75,7 @@ const DetailBanner = ({ video, crew }) => {
                         ).format("YYYY")})`}
                       </div>
 
-                      <div className={`${style.subtitle} text-base md:text-xl mb-4 italic opacity-[0.5]`}>{data?.tagline}</div>
+                      <div className={`${style.subtitle} text-base md:text-xl mb-4 italic opacity-[0.5]`}>{data.tagline}</div>
                       <div
                         className={`${style.row} flex items-center gap-[25px] mb-[25px]`}
                       >

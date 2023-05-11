@@ -1,3 +1,4 @@
+@import '/src/styles/variables.scss';
 .carousel {
     margin-bottom: 50px;
     
@@ -33,11 +34,17 @@
         .skeletonItem {
             width: 125px;
             flex-shrink: 0;
+            background: $blacklight;
             .posterBlock {
+                position: relative;
                 border-radius: 12px;
                 width: 100%;
                 aspect-ratio: 1 / 1.5;
                 margin-bottom: 30px;
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+                padding: 10px;
             }
         }
     }
@@ -75,21 +82,12 @@
                         object-position: center;
                         margin: 0;
                     }
-                // .genres {
-                //     display: none;
-                //     position: relative;
-                //     // @include md {
-                //     //     display: flex;
-                //     //     flex-flow: wrap;
-                //     //     justify-content: flex-end;
-                //     // }
-                // }
             }
         }
     }
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 48rem){
     .carousel{
         .arrow{
             display: block;            
@@ -117,7 +115,13 @@
 }
 
 @media screen and (min-width: 64rem){
+
      .carousel{
+        .loadingSkeleton{
+            .skeletonItem{
+                width: calc(20% - 16px);
+            }
+        }
         .carouselItems{
             .carouselItem{
                 width: calc(20% - 16px);

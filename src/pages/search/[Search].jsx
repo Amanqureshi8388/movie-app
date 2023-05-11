@@ -49,7 +49,7 @@ const Search = () => {
     useEffect(() => {
       setPageNum(1);
       fetchInitialData();
-    }, [Search, fetchInitialData]);
+    }, [Search]);
     
   console.log(data);
 
