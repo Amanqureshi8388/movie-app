@@ -41,6 +41,7 @@ const DetailBanner = ({ video, crew }) => {
                     alt=""
                     width={1000}
                     height={1000}
+                    priority
                   />
                 </div>
                 <div className={`${style.opacity_layer}`}></div>
@@ -209,3 +210,5 @@ const DetailBanner = ({ video, crew }) => {
 };
 
 export default DetailBanner;
+
+
