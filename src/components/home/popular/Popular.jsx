@@ -4,11 +4,7 @@ import useFetch from "@/components/hooks/useFetch";
 
 const Popular = () => {
     const {data , loading} =  useFetch('/movie/popular')
-    const onTabChange = (tab) => {
-      setEndpoint(tab === "Movies" ? "movie" : "tv");
-     };
-  
-
+   
   return (
     <>
     <section>

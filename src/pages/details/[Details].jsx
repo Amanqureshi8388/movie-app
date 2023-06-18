@@ -13,7 +13,7 @@ import Similar from '@/components/detail/carousels/Similar';
 const Details = () => {
     const router = useRouter()
     const {Details} = router.query
-    const {data,loading} =  useFetch(`/movie/${Details && Details }/videos`)
+    const {data,loading} =  useFetch(`/movie/${Details && Details}/videos`)
     const {data: credits, loading: creditsLoading} =  useFetch(`/movie/${Details && Details}/credits`)
    
 

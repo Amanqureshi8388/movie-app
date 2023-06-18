@@ -49,7 +49,7 @@ const Carousel = ({data,loading,title}) => {
             <BsFillArrowRightCircleFill className={`${style.carouselRightNav} ${style.arrow}`} onClick={() => navigation("right")}/>
             {!loading ? (
                     <div className={`${style.carouselItems}`} ref={carouselContainer}>
-                        {data?.map((item) => {
+                        {data && data?.map((item) => {
                             const posterUrl = item.poster_path
                                 ? url + item.poster_path
                                 : PosterFallback;
